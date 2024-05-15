@@ -1,0 +1,25 @@
+.container{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    padding: 30px;
+   background-color: rgb(255, 255, 255);
+}
+
+.modal{
+    --bs-modal-header-border-color:none;
+    --bs-modal-footer-border-color:none;
+
+}
+#exampleModal{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+input{
+  width: 100%;
+
+}
+select{
+   width: 100%;
+  
+}
+

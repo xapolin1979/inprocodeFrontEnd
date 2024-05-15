@@ -1,0 +1,48 @@
+<div class="container mt-5">
+    <h2 class="mt-5">Editar cliente</h2>
+    <div  class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="alert">
+       Actualizado correctamente
+       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="cerrar()"></button>
+    </div>
+    <form class="row g-3 needs-validation mt-3" [formGroup]="datos" novalidate>
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">Nombre</label>
+          <input type="text" class="form-control" formControlName="nombre" id="validationCustom01" required>
+        
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Apellido</label>
+          <input type="text" class="form-control" formControlName="apellido" id="validationCustom02" required>
+          
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label" >Email</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">email</span>
+            <input type="email" class="form-control" formControlName="email" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+         </div>
+         <div class="alert alert-danger mt-3" role="alert" [hidden]="!datos.get('email')?.invalid || datos.get('email')?.pristine" >
+          email invalido 
+        </div>
+        </div>
+        
+        <div class="col-md-4">
+          <label for="validationCustom03" class="form-label">Telefono</label>
+          <input type="number" class="form-control" formControlName="telefono" id="validationCustom03" required>
+          <div class="alert alert-danger mt-3" role="alert" [hidden]="!datos.get('telefono')?.invalid || datos.get('telefono')?.pristine" >
+            El telefono debe tener 9 digitos
+         </div>
+        </div>
+        <div class="col-md-4">
+            <label for="validationCustom03" class="form-label">Ciudad</label>
+            <input type="text" class="form-control" formControlName="localizacion" id="validationCustom03" required>
+          
+          </div>
+     
+        <div class="col-12">
+          <button class="btn btn-success " type="submit" (click)="actualizarDatos()"  [disabled]="!formularioValido">Actualizar</button>
+          <button class="btn btn-primary" > <a href="http://localhost:4200">Volver a lista</a></button>
+        </div>
+     
+      </form>
+</div>

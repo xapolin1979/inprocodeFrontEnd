@@ -1,0 +1,23 @@
+#map-container{
+    width: 80%;
+    height:70vh;
+    position: relative;
+    border: 1px solid rgb(60, 60, 60);
+}
+.container{
+   width: 100%;
+   height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px ;
+}
+.categorias{
+    width: 200px;
+    height: auto;
+    padding: 10px;
+   background-color:rgb(60, 60, 60);
+   color:white;
+   position: absolute;
+   z-index:2 ;
+}

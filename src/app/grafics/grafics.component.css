@@ -1,0 +1,33 @@
+.container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.line{
+    width: 600px;
+ 
+    margin: 20px;
+}
+
+.bar{
+    width: 600px;
+    margin: 20px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .line{
+        width: 380px;
+        margin: 20px;
+    }
+    
+    .bar{
+        width: 380px;
+        margin: 20px;
+    }
+
+}

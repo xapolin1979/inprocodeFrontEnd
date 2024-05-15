@@ -1,0 +1,49 @@
+<div class="container mt-5">
+  <div class="table-responsive">
+    <table class="table table-hover ">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellidos</th>
+          <th scope="col">Email</th>
+          <th scope="col">Telefono</th>
+          <th scope="col">Ciudad</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of datos; index as i">
+          <th scope="row">{{datos[i].id}}</th>
+          <td>{{datos[i].nombre}}</td>
+          <td>{{datos[i].apellido}}</td>
+          <td>{{datos[i].email}}</td>
+          <td>{{datos[i].telefono}}</td>
+          <td>{{datos[i].localizacion}}</td>
+          <td>
+          <button type="button" class="btn btn-warning" (click)="obtenerInfo(datos[i].id)"  >Editar</button>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" [attr.data-bs-target]="'#confirmarBorrarModal-' + i">Borrar</button>
+          </td>
+        </tr>
+        <div *ngFor="let user of datos; index as i" class="modal" [id]="'confirmarBorrarModal-' + i" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Borrar cliente</h5>
+              </div>
+              <div class="modal-body">
+                <p>¿Estás seguro de querer borrar a {{datos[i].nombre}} {{datos[i].apellido}}?</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger" (click)="borrar(datos[i].id)" data-bs-dismiss="modal">Borrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </tbody>
+    </table>
+  </div>
+  <a href="http://localhost:4200/registro"> <button type="button " class="btn btn-success"> Añadir</button></a>
+</div>

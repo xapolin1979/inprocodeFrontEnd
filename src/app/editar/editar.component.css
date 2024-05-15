@@ -1,0 +1,12 @@
+button{
+    margin-right: 10px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+form{
+    padding: 30px;
+    background-color:rgb(235, 235, 235);
+    border-radius: 5px;
+}

@@ -1,0 +1,66 @@
+<div class="container">
+    <full-calendar [options]="calendarOptions"></full-calendar>
+  </div>
+  
+
+  <div class="modal" tabindex="-1" [class.show]="verModal" style="display: block;" id="exampleModal" *ngIf="verModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Nuveo evento</h5>
+          <button type="button" class="btn-close" (click)="verModal = false" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="evento1">
+            <label for="evento">Evento : </label>
+            <input type="text" id="evento" [formControl]="eventoControl">
+          </div>
+         <div class="evento1">
+          <label for="color">color : </label>
+          <select name="" id="color" [formControl]="eventoColor">
+           <option value="red">Rojo</option>
+           <option value="blue">Azul</option>
+            <option value="green">Verde</option>
+          </select>
+         </div>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" (click)="crearEvento()">Crear evento</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <div class="modal" tabindex="-1" [class.show]="editarModal" style="display: block;" id="exampleModal" *ngIf="editarModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Nuveo evento</h5>
+          <button type="button" class="btn-close" (click)="editarModal = false" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="evento1">
+            <label for="evento">Evento : </label>
+            <input type="text" id="evento" [formControl]="editarControl" >
+          </div>
+         <div class="evento1">
+          <label for="color">color : </label>
+          <select name="" id="color" [formControl]="editarColor">
+           <option value="red">Rojo</option>
+           <option value="blue">Azul</option>
+            <option value="green">Verde</option>
+          </select>
+         </div>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" (click)="borrarEvento(idEvento)">Eliminar evento</button>
+          <button type="button" class="btn btn-primary" (click)=" editarEvento(idEvento)">Editar evento</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

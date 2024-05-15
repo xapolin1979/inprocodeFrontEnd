@@ -1,27 +1,28 @@
-# Inprocode
+# InprocodeFrontEnd
+Proyecto generado con [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+## Características
 
-## Development server
+Crud: El proyecto cuenta con un sistema de CRUD (Create, Read, Update, Delete) para gestionar eventos.
+Mapa: Integración de un mapa para visualizar la ubicación de los eventos.
+Calendario: Funcionalidad de calendario para organizar y mostrar eventos.
+Gráfica: Inclusión de una gráfica para visualizar datos relevantes.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Instalación
 
-## Code scaffolding
+Clona el repositorio: git clone  https://github.com/xapolin1979/inprocodeFrontEnd.git
+Navega al directorio del proyecto: cd tu_proyecto
+Instala las dependencias: npm install
+En la carpeta environment esta el arvhivo environment.ts debes poner tu token para poder hacer funcionar Mapbox
+Instala también InprocodeBackEnd que esta en otro repositorio
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Inicia la aplicación
 
-## Build
+Para iniciar la aplicación, sigue estos pasos:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Ejecuta el comando ng serve en tu terminal.
+Abre tu navegador web preferido.
+Navega a la dirección http://localhost:4200.
+Explora las diferentes funcionalidades del proyecto una vez que la aplicación esté cargada en tu navegador.
+¡Disfruta explorando!
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
