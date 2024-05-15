@@ -19,7 +19,7 @@ Proyecto generado con [Angular CLI](https://github.com/angular/angular-cli) vers
 2. Navega al directorio del proyecto: `cd tu_proyecto`
 3. Instala las dependencias: `npm install`
 4. En la carpeta `environment` está el archivo `environment.ts`, debes poner tu token para poder hacer funcionar Mapbox.
-5. Instala también InprocodeBackEnd que está en otro repositorio.
+5. Instala también inprocodeBack que está en otro repositorio.
 
 ---
 
