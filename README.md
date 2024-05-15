@@ -34,4 +34,6 @@ Para iniciar la aplicación, sigue estos pasos:
 
 ¡Disfruta explorando!
 
+## Créditos
 
+Este proyecto fue desarrollado por [Eloi Ginesti](https://github.com/xapolin1979).
