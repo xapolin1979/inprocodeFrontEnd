@@ -14,6 +14,7 @@ import { Router } from '@angular/router';
 export class HomeComponent {
 infoCliente:any;
 datos:any;
+eliminado:boolean=false;
   constructor(private userService: UserService, private router: Router) { }
 
 
@@ -28,7 +29,12 @@ borrar(id:number){
   this.userService.eliminarRegistro(id).subscribe(response => {
     console.log(response.message); 
   });
+  this.eliminado=true;
    this. obtenerRegistros()
+}
+
+cerrar(){
+  this.eliminado=false;
 }
 
 obtenerInfo(id:any){
